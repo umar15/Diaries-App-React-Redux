@@ -1,24 +1,23 @@
 import React, { FC, useState } from "react";
 import { useForm } from "react-hook-form";
 import { User } from "../../interfaces/user.interface";
-import * as Yup from "yup";
+// import * as Yup from "yup";
 import http from "../../services/api";
 import { saveToken, setAuthState } from "./authSlice";
 import { setUser } from "./userSlice";
 import { AuthResponse } from "../../services/mirage/routes/user";
 import { useAppDispatch } from "../../store";
 
-const schema = Yup.object().shape({
-	username: Yup.string()
-		.required("What> No Username?")
-		.max(16, "username cannot be longer than 16 characters"),
-	password: Yup.string().required("Please enter password"),
-	email: Yup.string().email("Enter email i.e abc@mail.com"),
-});
+// const schema = Yup.object().shape({
+// 	username: Yup.string()
+// 		.required("What> No Username?")
+// 		.max(16, "username cannot be longer than 16 characters"),
+// 	password: Yup.string().required("Please enter password"),
+// 	email: Yup.string().email("Enter email i.e abc@mail.com"),
+// });
 
 const Auth: FC = () => {
 	const { handleSubmit, register, errors } = useForm<User>();
-
 	const [isLogin, setIsLogin] = useState(true);
 	const [loading, setLoading] = useState(false);
 	const dispatch = useAppDispatch();

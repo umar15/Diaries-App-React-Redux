@@ -10,10 +10,9 @@ import { updateDiary } from "../diary/diariesSlice";
 import { updateEntry } from "./entriesSlice";
 import { showAlert } from "../../util";
 import { useAppDispatch } from "../../store";
-import { act } from "react-dom/test-utils";
 
 const Editor: FC = () => {
-	const { CurrentlyEditing: entry, canEdit, activeDiaryId } = useSelector(
+	const { currentlyEditing: entry, canEdit, activeDiaryId } = useSelector(
 		(state: RootState) => state.editor
 	);
 	const [editedEntry, updateEditedEntry] = useState(entry);

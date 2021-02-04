@@ -4,7 +4,6 @@ import { Diary } from "../../../interfaces/diary.interface";
 import { Entry } from "../../../interfaces/entry.interface";
 import dayjs from "dayjs";
 import { User } from "../../../interfaces/user.interface";
-import user from "./user";
 
 export const create = (
 	schema: any,

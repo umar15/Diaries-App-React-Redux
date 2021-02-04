@@ -3,6 +3,6 @@ export interface Entry {
 	title: string;
 	content: string;
 	createdAt?: string;
-	updatedAT?: string;
+	updatedAt?: string;
 	diaryId?: string;
 }
